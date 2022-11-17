@@ -1,0 +1,26 @@
+specVersion: 0.34.0
+name: hello-func-typescript
+runtime: typescript
+registry: quay.io/viraj_1
+image: quay.io/viraj_1/hello-func-typescript:latest
+imageDigest: sha256:8f27426a1408a356fb7a9f5afab0b597ac6e9d78253365df84a9e0fac05e8966
+created: 2022-11-16T19:02:28.850051856+05:30
+invocation:
+  format: http
+build:
+  buildpacks: []
+  builder: pack
+  buildEnvs:
+  - name: BP_NODE_RUN_SCRIPTS
+    value: build
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: viraj
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
