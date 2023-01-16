@@ -9,7 +9,7 @@ invocation:
   format: http
 build:
   buildpacks: []
-  builder: pack
+  builder: s2i
   buildEnvs:
   - name: BP_NODE_RUN_SCRIPTS
     value: build
